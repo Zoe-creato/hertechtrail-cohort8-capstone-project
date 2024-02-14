@@ -187,22 +187,22 @@ $(document).ready(function() {
 	
 
 	/*====================================
-    Portfolio Isotope Filter
+    project Isotope Filter
     ======================================*/
 	
 	$(window).load(function(){'use strict';
-		var $portfolio_selectors = $('.portfolio-filter >li>a');
-		var $portfolio = $('.portfolio-items');
-		$portfolio.isotope({
-			itemSelector : '.portfolio-item',
+		var $project_selectors = $('.project-filter >li>a');
+		var $project = $('.project-items');
+		$project.isotope({
+			itemSelector : '.project-item',
 			layoutMode : 'fitRows'
 		});
 		
-		$portfolio_selectors.on('click', function(){
-			$portfolio_selectors.removeClass('active');
+		$project_selectors.on('click', function(){
+			$project_selectors.removeClass('active');
 			$(this).addClass('active');
 			var selector = $(this).attr('data-filter');
-			$portfolio.isotope({ filter: selector });
+			$project.isotope({ filter: selector });
 			return false;
 		});
 	});
